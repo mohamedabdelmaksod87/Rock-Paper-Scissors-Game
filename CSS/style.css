@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+}
+
+.scoreboard {
+  width: 700px;
+  border: 1px solid white;
+  border-radius: 15px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.trails,
+.percent {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.trails {
+  display: flex;
+}
+
+.wins,
+.text {
+  margin-right: 8px;
+}
+
+.reset {
+  font-size: 15px;
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: hsl(229, 25%, 31%);
+  transition: all 0.3s;
+}
+
+.reset:hover {
+  background-color: bisque;
+  transform: translate3d(0, -2px, 0);
+}
+
+.title {
+  margin-left: 30px;
+}
+
+.score {
+  width: 150px;
+  height: 114px;
+  background-color: white;
+  border-radius: 8px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score h1 {
+  color: #565468;
+  font-size: 56px;
+}
+
+.score p {
+  color: #2a45c2;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.hands {
+  background-image: url("../assets/triangle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 476px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.scissors {
+  margin-left: 20px;
+}
+
+.paper {
+  margin-right: 20px;
+}
+
+.hands .hand {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hands .hand:hover {
+  transform: translate3d(0, -8px, 0);
+}
+
+.contest {
+  width: 760px;
+  display: none;
+  margin-top: 50px;
+}
+
+.contest img {
+  width: 250px;
+  height: 250px;
+}
+
+.contest > div {
+  flex: 1;
+}
+
+.contest h1 {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contest .handImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.referee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.referee h1 {
+  font-size: 45px;
+}
+
+.newGame {
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: hsl(229, 25%, 31%);
+  transition: all 0.3s;
+}
+
+.newGame:hover {
+  background-color: bisque;
+  transform: translate3d(0, -2px, 0);
+}
+
+.setArea {
+  width: 250px;
+  height: 250px;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .scoreboard {
+    width: 90%;
+    padding: 10px 10px;
+    margin-top: 5%;
+  }
+
+  .title {
+    margin-left: 0;
+  }
+
+  .title img {
+    width: 125px;
+    height: 100px;
+  }
+
+  .statistics {
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .reset {
+    padding: 6px 11px;
+    font-size: 15px;
+  }
+
+  .score {
+    width: 125px;
+    height: 100px;
+    margin-right: 0;
+  }
+
+  .contest {
+    width: 490px;
+    height: 350px;
+    margin-top: 40px;
+  }
+
+  .userhand,
+  .computerhand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contest img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .setArea {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contest h1 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+
+  .referee h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .picked {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .newGame {
+    padding: 6px 11px;
+    font-size: 15px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scoreboard {
+    width: 315px;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+
+  .statistics {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    width: 250px;
+    margin-left: -125px;
+    font-size: 15px;
+  }
+
+  .reset {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+
+  .title img {
+    width: 125px;
+    height: 100px;
+  }
+
+  .score {
+    width: 125px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .hands {
+    background-size: 200px 200px;
+    width: 315px;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .hands img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contest {
+    width: 315px;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .contest img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .setArea {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contest h1 {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+
+  .picked {
+    width: 105px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .referee {
+    justify-content: end;
+  }
+
+  .referee h1 {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .newGame {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}

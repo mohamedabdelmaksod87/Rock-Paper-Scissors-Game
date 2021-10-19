@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="svg"></div>
+      <div class="scoreboard">
+        <div class="title">
+          <img src="assets/title.png" />
+        </div>
+        <div class="statistics">
+          <div class="trails">
+            <div class="wins">0</div>
+            <div class="text">Wins Out Of</div>
+            <div class="totalTrails">0</div>
+          </div>
+          <div class="percent">0 %</div>
+          <div class="reset" onclick="resetPage()">RESET SCORE</div>
+        </div>
+        <div class="score">
+          <p>SCORE</p>
+          <h1>0</h1>
+        </div>
+      </div>
+      <div class="hands">
+        <div class="hand paper">
+          <img src="assets/Paper.png" onclick="pickUserhand('paper')" />
+        </div>
+        <div class="hand scissors">
+          <img src="assets/Scissors.png" onclick="pickUserhand('scissors')" />
+        </div>
+        <div class="hand rock">
+          <img src="assets/Rock.png" onclick="pickUserhand('rock')" />
+        </div>
+      </div>
+      <div class="contest">
+        <div class="userhand">
+          <div class="picked">
+            <h1>USER</h1>
+          </div>
+          <div class="handImageContainer">
+            <img id="userPickImage" src="assets/Paper.png" />
+          </div>
+        </div>
+        <div class="referee">
+          <div class="loseAnimation"></div>
+          <div class="decision"><h1>USER</h1></div>
+          <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+        <div class="computerhand">
+          <div class="picked">
+            <h1>COMPUTER</h1>
+          </div>
+          <div class="handImageContainer">
+            <img id="computerPickImage" src="assets/Scissors.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/app.js"></script>
+
+    <!-- bodymovin After Effects plugin for exporting animations to SVG + JavaScript or canvas + JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"
+      integrity="sha512-srGxQe2w7s50+5/nNgEVKYtBm15zRylJwdjxYnGEZr3mmHFJKFjA/ImA2OKizVzoIDX8XISMHDI1+az9pnumbQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
