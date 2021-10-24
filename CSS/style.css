@@ -354,7 +354,7 @@ body {
   }
 
   .referee {
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .referee h1 {
